@@ -1,13 +1,341 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ease-Event - Discover Amazing Events</title>
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo.png" alt="EventHub" height="40">
+                <span>Ease-Event</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#events">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="feedback.html">Feedback</a>
+                     </li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="btn btn-outline-light" href="login.html">Login</a>
+                    </li>
+                    <li class="nav-item ms-lg-2">
+                        <a class="btn btn-primary" href="register.html">Register</a>
+                    </li>
+                    <!-- logout functionality -->
+                    <li class="nav-item ms-lg-2" id="logoutButtonContainer" style="display: none;">
+                        <a class="btn btn-primary" href="#" id="logoutButton">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-lg-8">
+                    <h1 class="display-3 fw-bold mb-4 animate__animated animate__fadeInDown">Discover Your Next <span class="text-primary">Experience</span></h1>
+                    <p class="lead mb-5 animate__animated animate__fadeIn animate__delay-1s">Join thousands of events happening around you. From concerts to conferences, we've got you covered.</p>
+                    <div class="d-flex flex-wrap animate__animated animate__fadeIn animate__delay-2s">
+                        <a href="#events" class="btn btn-primary btn-lg me-3 mb-3">Explore Events</a>
+                        <a href="register.html" class="btn btn-outline-light btn-lg mb-3">Get Started</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll-down">
+            <a href="#events" class="scroll-link">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events" class="py-5">
+        <div class="container">
+            <div class="section-header text-center mb-5">
+                <h2 class="fw-bold">Featured Events</h2>
+                <p class="text-muted">Discover upcoming events you might love</p>
+                <div class="header-divider"></div>
+            </div>
+            
+            <div class="row g-4">
+                <!-- Event Card 1 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card event-card h-100">
+                        <div class="event-badge">Popular</div>
+                        <div class="event-image" style="background-image: url('images/event-1.jpg');"></div>
+                        <div class="card-body">
+                            <div class="event-meta mb-3">
+                                <span class="event-category bg-primary">Music</span>
+                                <span class="event-date"><i class="far fa-calendar-alt me-2"></i>Jun 15, 2023</span>
+                            </div>
+                            <h3 class="card-title">Summer Music Festival</h3>
+                            <p class="card-text">Join us for the biggest music festival of the year featuring top artists from around the world.</p>
+                            <div class="event-footer">
+                                <span class="event-location"><i class="fas fa-map-marker-alt"></i> Central Park, NY</span>
+                                <a href="#" class="btn btn-sm btn-primary">Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Event Card 2 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card event-card h-100">
+                        <div class="event-badge">Early Bird</div>
+                        <div class="event-image" style="background-image: url('images/event-2.jpg');"></div>
+                        <div class="card-body">
+                            <div class="event-meta mb-3">
+                                <span class="event-category bg-info">Technology</span>
+                                <span class="event-date"><i class="far fa-calendar-alt me-2"></i>Jul 22, 2023</span>
+                            </div>
+                            <h3 class="card-title">Tech Innovators Conference</h3>
+                            <p class="card-text">Learn from industry leaders about the latest trends in technology and innovation.</p>
+                            <div class="event-footer">
+                                <span class="event-location"><i class="fas fa-map-marker-alt"></i> Convention Center, SF</span>
+                                <a href="#" class="btn btn-sm btn-primary">Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Event Card 3 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card event-card h-100">
+                        <div class="event-image" style="background-image: url('images/event-3.jpg');"></div>
+                        <div class="card-body">
+                            <div class="event-meta mb-3">
+                                <span class="event-category bg-warning">Food</span>
+                                <span class="event-date"><i class="far fa-calendar-alt me-2"></i>Aug 5, 2023</span>
+                            </div>
+                            <h3 class="card-title">International Food Expo</h3>
+                            <p class="card-text">Experience culinary delights from around the world in this grand food exhibition.</p>
+                            <div class="event-footer">
+                                <span class="event-location"><i class="fas fa-map-marker-alt"></i> Exhibition Hall, Chicago</span>
+                                <a href="#" class="btn btn-sm btn-primary">Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5">
+                <a href="event-details.html?id=1" class="btn btn-outline-primary">View All Events</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="section-header text-center mb-5">
+                <h2 class="fw-bold">Why Choose Ease-Event?</h2>
+                <p class="text-muted">We make event management simple and effective</p>
+                <div class="header-divider"></div>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="feature-card text-center p-4 h-100">
+                        <div class="feature-icon mb-4">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                        <h4>Easy Event Creation</h4>
+                        <p class="text-muted">Create and manage your events with our intuitive interface in just a few clicks.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="feature-card text-center p-4 h-100">
+                        <div class="feature-icon mb-4">
+                            <i class="fas fa-ticket-alt"></i>
+                        </div>
+                        <h4>Ticket Management</h4>
+                        <p class="text-muted">Sell tickets, track attendance, and manage registrations all in one place.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="feature-card text-center p-4 h-100">
+                        <div class="feature-icon mb-4">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h4>Analytics & Insights</h4>
+                        <p class="text-muted">Get valuable insights about your attendees and event performance.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+     <!-- Testimonials -->
+    <section class="py-5">
+        <div class="container">
+            <div class="section-header mb-5 text-center">
+                <h2 class="fw-bold">What Our Users Say</h2>
+                <p class="text-muted">Trusted by event organizers worldwide</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="testimonial-card text-center p-4">
+                                    <img src="images/organizer-1.jpg" class="rounded-circle mb-3" width="80" alt="Sarah Johnson">
+                                    <h5>Sarah Johnson</h5>
+                                    <p class="text-muted">Event Organizer</p>
+                                    <p class="testimonial-text">"EventHub has transformed how we manage our conferences. The platform is intuitive and has all the features we need to sell tickets and communicate with attendees."</p>
+                                    <div class="rating mb-3">
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="testimonial-card text-center p-4">
+                                    <img src="https://randomuser.me/api/portraits/men/32.jpg" class="rounded-circle mb-3" width="80" alt="Michael Chen">
+                                    <h5>Michael Chen</h5>
+                                    <p class="text-muted">Music Festival Director</p>
+                                    <p class="testimonial-text">"The analytics dashboard helped us understand our audience better than ever before. We doubled our attendance from last year using EventHub's marketing tools."</p>
+                                    <div class="rating mb-3">
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star-half-alt text-warning"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- CTA Section -->
+    <section class="py-5 bg-primary text-white">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8 mb-4 mb-lg-0">
+                    <h3 class="fw-bold mb-3">Ready to create your next event?</h3>
+                    <p class="mb-0">Join thousands of organizers who trust EventHub for their event management needs.</p>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <a href="register.html" class="btn btn-light btn-lg">Get Started Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-5 pb-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <a class="d-flex align-items-center mb-3 text-decoration-none">
+                        <img src="images/logo.png" alt="EventHub" height="30">
+                        <span class="ms-2 fs-5 fw-bold">Ease-Event</span>
+                    </a>
+                    <p>The complete event management solution for organizers and attendees.</p>
+                    <div class="social-links mt-4">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase mb-4">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="text-white">Home</a></li>
+                        <li class="mb-2"><a href="about.html" class="text-white">About Us</a></li>
+                        <li class="mb-2"><a href="#events" class="text-white">Events</a></li>
+                        <li class="mb-2"><a href="contact.html" class="text-white">Contact Us</a></li>
+                        <li class="mb-2"><a href="feedback.html" class="text-white">Feedback</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase mb-4">Support</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white">FAQ</a></li>
+                        <li class="mb-2"><a href="#" class="text-white">Help Center</a></li>
+                        <li class="mb-2"><a href="#" class="text-white">Privacy Policy</a></li>
+                        <li class="mb-2"><a href="#" class="text-white">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase mb-4">Contact</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-map-marker-alt me-3"></i> 123 Event St, New York, NY</li>
+                        <li class="mb-2"><i class="fas fa-phone me-3"></i> +1 234 567 890</li>
+                        <li class="mb-2"><i class="fas fa-envelope me-3"></i> info@eventhub.com</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="mb-4">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy; 2023 EventHub. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0">Designed with <i class="fas fa-heart text-danger"></i> by Kalyani | Mansi | Kushal</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Owl Carousel -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+</body>
 </html>
